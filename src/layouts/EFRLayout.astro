@@ -1,0 +1,16 @@
+---
+type Props = {
+    page: string;
+};
+
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+
+const { page } = Astro.props;
+---
+
+<Header />
+<main class={`breakout flow ${page === "post" ? "prose" : ""}`}>
+    <slot />
+</main>
+<Footer />
