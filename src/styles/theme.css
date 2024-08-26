@@ -25,7 +25,7 @@
   --space_2xl: clamp(4rem, 3.8261rem + 0.8696vw, 4.5rem);
   --space_3xl: clamp(5rem, 4.7826rem + 1.087vw, 5.625rem);
   --page_gutters: clamp(var(--space_m), 3vw, var(--space_xl));
-  --page-max: 44rem;
+  --page-max: 80rem;
 }
 
 :root {

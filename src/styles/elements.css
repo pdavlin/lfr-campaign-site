@@ -6,10 +6,10 @@
 }
 
 .breakout {
-  --gutter-max: calc(1rem + 10vw);
+  --gutter-max: calc(1rem + 15vw);
   --gap: var(--space_m);
-  /* --content: min(var(--page-max), 100% - var(--gap) * 2); */
-  --content: 1fr;
+  --content: min(var(--page-max), 100% - var(--gap) * 2);
+  /* --content: 1fr; */
   --gutter: minmax(var(--gap), var(--gutter-max));
   --popout: minmax(0px, 1rem);
   grid-template-columns:

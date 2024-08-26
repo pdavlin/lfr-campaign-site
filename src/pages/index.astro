@@ -2,8 +2,10 @@
 import "@styles/global.css";
 import DocumentHead from "@components/DocumentHead.astro";
 import Layout from "@layouts/EFRLayout.astro";
+import BreakoutFlow from "@components/BreakoutFlow.astro";
+import SplitScreenHeader from "@components/SplitScreenHeader.astro"
 
-const title = "Re-Elect Elizabeth!";
+const title = "Elizabeth O'Connor for Nebraska Board of Regents - District 4";
 const description = "Re-Elect Elizabeth O'Connor for the University of Nebraska Board of Regents in District 4.";
 const permalink = "https://elizabethforregent.com";
 const page = "home";
@@ -17,10 +19,46 @@ const page = "home";
     />
     <body>
         <Layout page={page}>
-            <h1 class="title" style="text-transform: none;">RE-ELECT Elizabeth O'Connor for the Board of Regents</h1>
+            <BreakoutFlow>
+              <h1 class="title" style="text-transform: none;">RE-ELECT Elizabeth O'Connor for the Nebraska Board of Regents</h1>
+            </BreakoutFlow>
+            <SplitScreenHeader>
+            <div style="display: grid; place-content: center; border: 1px solid white;">pic here</div>
+            <BreakoutFlow>
             <p>
-                I'm running
+                Elizabeth O'Connor running to represent District 4 on the Nebraska Board of Regents.
             </p>
+            <p>
+                With your help, she will continue to ensure that the University of Nebraska is funded fairly, spends prudently, and invests wisely in our future.
+            </p>
+            <button>DONATE</button>
+            </BreakoutFlow>
+            </SplitScreenHeader>
+            <br>
+            <BreakoutFlow>
+              <h2>Achievements on the Board</h2>
+              <p>As a Regent, Elizabeth has made significant contributions to the University of Nebraska and to the wider community. She strongly supported the following objectives:</p>
+              <ul>
+                <li><strong>Implementing Nebraska Promise</strong>, and covering tuition for families making less than $65,000 per year.</li>
+                <li><strong>Lowering Deferred Maintenance Costs</strong> through bond sales to save taxpayer money.</li>
+                <li><strong>Addressing the rural health crisis</strong> through a partnership between UNK and UNMC.</li>
+              </ul>
+              <h2>Elizabeth's Priorities</h2>
+              <ul class="priorities-list">
+                <li><strong>For Taxpayers</strong>: Creatively and proactively address and solve budget challenges</li>
+                <li><strong>For Students</strong>: Create meaningful opportunities for a successful future here in Nebraska.</li>
+                <li><strong>For Professors</strong>: Invest in, and support, a world-class faculty.</li>
+                <li><strong>For The Future</strong>: Support research driving innovation and advancement within our University and around the world.</li>
+                <li><strong>For Nebraska</strong>: Create a University system that empowers students, staff, and our community.</li>
+              </ul>
+            </BreakoutFlow>
         </Layout>
     </body>
 </html>
+
+<style>
+
+.priorities-list > li > strong {
+  text-transform: uppercase;
+}
+</style>
