@@ -1,0 +1,37 @@
+button {
+  background-color: var(--grey_0a);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  color: var(--blue_00);
+  font-size: 1.25rem;
+  font-weight: bold;
+  height: 3rem;
+  outline: none;
+}
+
+a.button-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--grey_0a);
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--blue_00);
+  font-size: 1.25rem;
+  font-weight: bold;
+  height: 3rem;
+  text-decoration: none;
+}
+
+button.primary,
+a.button-link.primary {
+  color: var(--grey_0a);
+  background-color: var(--blue_00);
+  transition: background-color 200ms ease-in-out;
+}
+
+button.primary:hover,
+a.button-link.primary:hover {
+  background-color: var(--blue_03);
+}

@@ -1,30 +1,36 @@
 ---
-
+import { Image } from "astro:assets";
+import efrCampaignLogo from "../images/elizabeth-oconnor-bor-logo.png";
 ---
 
 <header class="site-header">
-    <nav class="cluster">
-        <ul class="cluster" role="list">
-            <li>
-                <a href="/">Home</a>
-            </li>
-            <li>
-                <a href="/meet-elizabeth/">Meet Elizabeth</a>
-            </li>
-            <li>
-                <a href="/board-of-regents/">About The Board of Regents</a>
-            </li>
-        </ul>
-    </nav>
+  <div class="logo-container">
+    <Image src={efrCampaignLogo} alt="Elizabeth O'Connor for Board of Regents Campaign Logo" />
+  </div>
+  <nav class="cluster">
+      <ul class="cluster" role="list">
+          <li>
+              <a href="/">Home</a>
+          </li>
+          <li>
+              <a href="/meet-elizabeth/">Meet Elizabeth</a>
+          </li>
+          <li>
+              <a href="/board-of-regents/">About The Board of Regents</a>
+          </li>
+      </ul>
+  </nav>
 </header>
 
 <style>
     .site-header {
         position: relative;
         display: flex;
-        justify-content: space-evenly;
+        grid-template-columns: auto 1fr;
+        justify-content: space-between;
         padding-inline: var(--page_gutters);
-        margin-block: var(--page_gutters) var(--space_xl);
+        margin-block: var(--page_gutters) var(--space_l);
+        width: 100%;
         z-index: 1;
 
         a {
@@ -33,6 +39,17 @@
             place-content: center;
             color: currentcolor;
             text-decoration: none;
+        }
+
+        .logo-container {
+          padding-right: 2rem;
+          width: 10rem;
+        }
+        img {
+          display: inline;
+          object-fit: contain;
+          width: 100%;
+          height: 100%;
         }
     }
 

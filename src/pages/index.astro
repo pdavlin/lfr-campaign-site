@@ -4,6 +4,8 @@ import DocumentHead from "@components/DocumentHead.astro";
 import Layout from "@layouts/EFRLayout.astro";
 import BreakoutFlow from "@components/BreakoutFlow.astro";
 import SplitScreenHeader from "@components/SplitScreenHeader.astro"
+import { Image } from "astro:assets";
+import elizabethOconnorProfileImage from "../images/elizabeth-oconnor-profile-photo.jpg";
 
 const title = "Elizabeth O'Connor for Nebraska Board of Regents - District 4";
 const description = "Re-Elect Elizabeth O'Connor for the University of Nebraska Board of Regents in District 4.";
@@ -19,46 +21,97 @@ const page = "home";
     />
     <body>
         <Layout page={page}>
-            <BreakoutFlow>
-              <h1 class="title" style="text-transform: none;">RE-ELECT Elizabeth O'Connor for the Nebraska Board of Regents</h1>
-            </BreakoutFlow>
-            <SplitScreenHeader>
-            <div style="display: grid; place-content: center; border: 1px solid white;">pic here</div>
-            <BreakoutFlow>
-            <p>
-                Elizabeth O'Connor running to represent District 4 on the Nebraska Board of Regents.
-            </p>
-            <p>
-                With your help, she will continue to ensure that the University of Nebraska is funded fairly, spends prudently, and invests wisely in our future.
-            </p>
-            <button>DONATE</button>
-            </BreakoutFlow>
-            </SplitScreenHeader>
-            <br>
-            <BreakoutFlow>
-              <h2>Achievements on the Board</h2>
-              <p>As a Regent, Elizabeth has made significant contributions to the University of Nebraska and to the wider community. She strongly supported the following objectives:</p>
+            <div class="header-content">
+              <Image class="headline-photo" src={elizabethOconnorProfileImage} alt="Elizabeth O'Connor smiling, arms crossed"/>
+              <div class="cta-container">
+                <div class="cta-text">
+                  <h1>With your help, Elizabeth can ensure that the University of Nebraska is <em>funded fairly, spends prudently, and invests wisely for the future</em>.</h1>
+                  <a class="button-link primary" href="https://contact.elizabethforregent.com" target="_blank">Donate</a>
+                </div>
+              </div>
+            </div>
+            <div class="breakout flow spacer-top">
+              <h2>Transforming Nebraska’s Future: Elizabeth O'Connor's Commitment to Education</h2>
+              <p>As Student Body President at the University of Nebraska at Omaha and a Student Representative on the Board of Regents, Elizabeth O'Connor witnessed firsthand how higher education can change lives. She saw how a great professor, an impactful internship, or a degree could redefine a person’s future. This transformation happens every year for thousands of students across the four universities. Inspired by these experiences, Elizabeth committed herself to making higher education more accessible to Nebraskans</p>
+              <p>After completing law school, Elizabeth returned to Nebraska, knowing that no other place would ever feel like home. In 2018, she ran for the District 4 seat on the Board of Regents and was honored to become the youngest Regent ever elected and one of the few women to serve.</p>
+              <h2>Progress and Vision</h2>
+              <p>Elizabeth O’Connor's five years on the Board of Regents have been marked by significant achievements, including the following:</p>
               <ul>
-                <li><strong>Implementing Nebraska Promise</strong>, and covering tuition for families making less than $65,000 per year.</li>
-                <li><strong>Lowering Deferred Maintenance Costs</strong> through bond sales to save taxpayer money.</li>
-                <li><strong>Addressing the rural health crisis</strong> through a partnership between UNK and UNMC.</li>
+              <li><a href="https://nebraska.edu/nebraska-promise">Nebraska Promise</a>: Covering tuition for students from families earning $65,000 or less.</li>
+              <li><a href="https://omaha.com/news/state-and-regional/nus-deferred-maintenance-program-making-headway-providing-economic-boost/article_9ffa4670-2310-11ed-b958-633325a36dfd.html">Deferred Maintenance Projects</a>: Utilizing low interest rates to save taxpayers an estimated $1.5 billion over 40 years.</li>
+              <li><a href="https://www.unmc.edu/newsroom/2023/09/06/groundbreaking-unk-unmc-partnership-ushers-in-new-era-for-rural-health-care/">Healthcare in Rural Nebraska</a>: A partnership between UNK and UNMC to address the rural healthcare gap.</li>
               </ul>
-              <h2>Elizabeth's Priorities</h2>
-              <ul class="priorities-list">
-                <li><strong>For Taxpayers</strong>: Creatively and proactively address and solve budget challenges</li>
-                <li><strong>For Students</strong>: Create meaningful opportunities for a successful future here in Nebraska.</li>
-                <li><strong>For Professors</strong>: Invest in, and support, a world-class faculty.</li>
-                <li><strong>For The Future</strong>: Support research driving innovation and advancement within our University and around the world.</li>
-                <li><strong>For Nebraska</strong>: Create a University system that empowers students, staff, and our community.</li>
-              </ul>
-            </BreakoutFlow>
+              <p>Yet, challenges remain. The University faces reduced state funding, declining enrollment, and the brain drain of young talent. Experienced, optimistic leadership is needed to navigate these issues and maintain the focus on the core mission of education.</p>
+              <h2>Commitment to Nebraska</h2>
+              <p>Elizabeth O’Connor is running for re-election because Nebraska students deserve a high-quality, affordable education. The focus is on attracting and retaining top talent, fostering new business and industries, and ensuring the University continues to be a leading institution in medical research and education.</p>
+              <p>With the support of the community, Elizabeth O'Connor will continue to work tirelessly to ensure that the University is funded fairly, spends wisely, and invests in a prosperous future for Nebraska.</p>
+              <p>Elizabeth thanks everyone for their continued support and belief in a brighter future for the state and its students. Together, great things can be achieved.</p>
+            </div>
         </Layout>
     </body>
 </html>
 
 <style>
 
+.spacer-top {
+  margin-block-start: var(--space_m);
+}
+
 .priorities-list > li > strong {
   text-transform: uppercase;
+}
+
+.header-content {
+  display: grid;
+  place-content: center;
+  @media (max-width: 768px) {
+    grid-template-rows: auto auto;
+  }
+}
+
+@media (min-width: 769px) {
+  .header-content > * {
+    grid-area: 1 / 1;
+  }
+}
+
+.cta-container {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.cta-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 35%;
+  @media (max-width: 768px) {
+    background-color: var(--red_00);
+    margin-block: var(--space_s);
+    padding: 0 var(--space_s);
+    width: 100%;
+  }
+}
+
+.cta-text > h1 {
+  color: var(--grey_0a);
+  margin-block-end: var(--space_s);
+  font-family: "Libre Baskerville";
+}
+
+.cta-text > a.button-link {
+  width: min(300px, 100% - var(--space_s) * 2);
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.headline-photo {
+  grid-area: 1 / 1;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 </style>
