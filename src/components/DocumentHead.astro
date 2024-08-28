@@ -30,19 +30,28 @@ const metaImage = "https://elizabethforregent.com/images/elizabeth-oconnor-openg
         permalink && (
             <>
                 <link rel="canonical" href={permalink} />
-                <meta name="twitter:card" content="summary" />
-                <meta name="twitter:site" content="@LizForRegent" />
-                <meta name="twitter:creator" content="@LizForRegent" />
-                <meta property="og:type" content="article" />
+
+                <meta name="author" content="Elizabeth O'Connor" />
+
+                <meta property="og:url" content={permalink} />
+                <meta property="og:type" content="website" />
                 <meta property="og:title" content={title} />
                 <meta property="og:description" content={description} />
-                <meta property="og:url" content={permalink} />
+
                 <meta property="og:site_name" content="Elizabeth O'Connor for Nebraska Board of Regents" />
                 <meta property="og:image" content={metaImage} />
-                <meta name="author" content="Elizabeth O'Connor" />
+                <meta property="og:image:width" content="1200">
+                <meta property="og:image:height" content="630">
+
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta property="twitter:domain" content="elizabethforregent.com">
+                <meta property="twitter:url" content="https://elizabethforregent.com/">
+                <meta name="twitter:title" content={title} />
+                <meta name="twitter:site" content="@LizForRegent" />
+                <meta name="twitter:creator" content="@LizForRegent" />
                 <meta name="twitter:label1" content="Paid for by" />
                 <meta name="twitter:data1" content="Elizabeth O'Connor For Regent" />
-            </>
+            <>
         )
     }
 </head>
