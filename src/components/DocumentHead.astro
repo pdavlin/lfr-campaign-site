@@ -8,6 +8,7 @@ interface Props {
 }
 
 let { title, description, permalink, canonicalUrl } = Astro.props;
+const metaImage = "https://elizabethforregent.com/images/elizabeth-oconnor-opengraph.jpg";
 ---
 
 <head>
@@ -38,7 +39,7 @@ let { title, description, permalink, canonicalUrl } = Astro.props;
                 <meta property="og:description" content={description} />
                 <meta property="og:url" content={permalink} />
                 <meta property="og:site_name" content="Elizabeth O'Connor for Nebraska Board of Regents" />
-                <!-- <meta property="og:image" content={metaImage} /> -->
+                <meta property="og:image" content={metaImage} />
                 <meta name="author" content="Elizabeth O'Connor" />
                 <meta name="twitter:label1" content="Paid for by" />
                 <meta name="twitter:data1" content="Elizabeth O'Connor For Regent" />
