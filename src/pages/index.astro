@@ -72,9 +72,9 @@ const page = "home";
 .header-content {
   display: grid;
   place-content: center;
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     grid-template-rows: auto auto;
-  }
+  } */
 }
 
 @media (min-width: 769px) {
@@ -97,7 +97,7 @@ const page = "home";
   height: 100%;
   width: 50%;
   @media (max-width: 768px) {
-    background-color: var(--red_00);
+    background-color: var(--color_blue);
     margin-block: var(--space_s);
     padding: 0 var(--space_s);
     width: 100%;
@@ -130,6 +130,11 @@ ul {
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 2rem;
   padding: 0;
+  @media(max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+  }
 }
 
 ul > li {

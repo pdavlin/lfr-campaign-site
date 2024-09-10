@@ -1,19 +1,40 @@
 ---
-const buildDate = new Date();
+import { Image } from "astro:assets";
+import efrCampaignLogo from "../images/efr-logo-white.svg";
 ---
 
-<footer class="site-footer breakout">
-    <span>Paid for by Elizabeth O'Connor For Regent</span>
-    <span>13110 Birch DR STE 148, PMB 182, Omaha, NE 68164</span>
+<footer class="site-footer">
+  <div>
+    <Image src={efrCampaignLogo} alt="Elizabeth O'Connor for Board of Regents Campaign Logo"/>
+    <div class="address-container">
+      <span>Paid for by Elizabeth O'Connor For Regent</span>
+      <span>13110 Birch DR STE 148, PMB 182, Omaha, NE 68164</span>
+    </div>
+  </div>
+  <div>
+  <button class="donate" style="width: 7.875rem">Donate</button>
+  </div>
 </footer>
 
 <style>
   .site-footer {
     background-color: var(--color_blue);
     color: white;
+    display: flex;
+    flex-direction: row;
     font-size: 11px;
-    margin-block: var(--page_gutters) 0;
-    padding-block: var(--space_2xl);
-    position: sticky;
+    justify-content: space-between;
+    margin: 0;
+    padding: var(--space_2xl);
+    > div {
+      align-items: center;
+      display: flex;
+      gap: 3rem;
+    }
+  }
+
+  .address-container {
+    display: flex;
+    flex-direction: column;
   }
 </style>

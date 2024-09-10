@@ -1,7 +1,7 @@
 :root {
   --color_blue: #0d2d53;
   --color_red: #c5204b;
-  --color_grey_light: color-mix(#e5e5e5, mix(#e5e5e5, #ffffff, 40%));
+  --color_grey_light: color-mix(in lch longer hue, #e5e5e5, white 40%);
   --color_grey_med: #6d6d6d;
   --color_black: #000000;
   --color_white: #ffffff;
@@ -17,6 +17,8 @@
   --space_3xl: clamp(5rem, 4.7826rem + 1.087vw, 5.625rem);
   --page_gutters: clamp(var(--space_m), 3vw, var(--space_xl));
   --page-max: 80rem;
+
+  --flow-space: 2rem;
 
   --font-size: 16px;
 
