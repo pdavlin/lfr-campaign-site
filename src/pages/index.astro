@@ -102,15 +102,25 @@ const page = "home";
     padding: 0 var(--space_s);
     width: 100%;
   }
+  > * {
+    margin-block-start: 2rem;
+  }
 }
 
-.cta-text > h1 {
-  font-size: 1.25rem !important;
-  margin-block-end: var(--space_s);
-}
+@media (max-width: 768px) {
 
-.cta-text > h2 {
-  font-size: 1.25rem !important;
+  .cta-text > * {
+    margin-block-start: 1rem;
+  }
+
+  .cta-text > h1 {
+    font-size: 1.25rem !important;
+    margin-block-end: var(--space_s);
+  }
+
+  .cta-text > h2 {
+    font-size: 1.25rem !important;
+  }
 }
 
 .cta-actions {
