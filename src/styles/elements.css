@@ -7,7 +7,7 @@
 .breakout {
   --gutter-max: calc(1rem + 15vw);
   --gap: var(--space_m);
-  --content: min(var(--page-max), 100% - var(--gap) * 2);
+  --content: min(var(--page-max), 100% - var(--gap) * 3);
   /* --content: 1fr; */
   --gutter: minmax(var(--gap), var(--gutter-max));
   --popout: minmax(8px, 12rem);
@@ -32,6 +32,9 @@
   gap: var(--row-gap, var(--gap, var(--space_m)))
     var(--column-gap, var(--gap, var(--space_m)));
   justify-content: var(--justify, flex-start);
+  @media (max-width: 768px) {
+    --justify: flex-end;
+  }
 }
 
 blockquote {

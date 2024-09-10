@@ -105,12 +105,12 @@ const page = "home";
 }
 
 .cta-text > h1 {
-  font-size: 2.625rem;
+  font-size: 1.25rem !important;
   margin-block-end: var(--space_s);
 }
 
 .cta-text > h2 {
-  font-size: 1.25rem;
+  font-size: 1.25rem !important;
 }
 
 .cta-actions {
@@ -118,7 +118,7 @@ const page = "home";
   flex-direction: row;
   gap: 1.5rem;
   > a.button-link {
-    width: 15rem;
+    width: min(15rem, 50%);
   }
 }
 
