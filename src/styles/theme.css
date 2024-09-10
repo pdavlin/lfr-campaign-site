@@ -1,56 +1,10 @@
 :root {
-  --base_00: #1b1818;
-  --base_01: #292424;
-  --base_02: #585050;
-  --base_03: #655d5d;
-  --base_04: #7e7777;
-  --base_05: #8a8585;
-  --base_06: #e7dfdf;
-  --base_07: #f4ecec;
-  --base_08: #ca4949;
-  --base_09: #b45a3c;
-  --base_0a: #a06e3b;
-  --base_0b: #4b8b8b;
-  --base_0c: #5485b6;
-  --base_0d: #7272ca;
-  --base_0e: #8464c4;
-  --base_0f: #bd5187;
-
-  --grey_00: #17171d;
-  --grey_01: #23232a;
-  --grey_02: #464750;
-  --grey_03: #5d5f6b;
-  --grey_04: #767783;
-  --grey_05: #8f909b;
-  --grey_06: #a8a9b3;
-  --grey_07: #c1c2ca;
-  --grey_08: #dfdfe7;
-  --grey_09: #f4f4fa;
-  --grey_0a: #fdfdfd;
-
-  --blue_00: #0f2d52;
-  --blue_01: #133968;
-  --blue_02: #17457d;
-  --blue_03: #1b5093;
-  --blue_04: #1f5ca9;
-  --blue_05: #2367be;
-  --blue_06: #2773d4;
-  --blue_07: #3a80db;
-  --blue_08: #4f8edf;
-  --blue_09: #659ce3;
-  --blue_0a: #a06e3b;
-
-  --red_00: #c51e4b;
-  --red_01: #db2153;
-  --red_02: #e03664;
-  --red_03: #e44c75;
-  --red_04: #e76286;
-  --red_05: #eb7897;
-  --red_06: #ee8ea8;
-  --red_07: #f1a4b9;
-  --red_08: #f5baca;
-  --red_09: #f8d0db;
-  --red_0a: #fbe6ec;
+  --color_blue: #0d2d53;
+  --color_red: #c5204b;
+  --color_grey_light: color-mix(#e5e5e5, mix(#e5e5e5, #ffffff, 40%));
+  --color_grey_med: #6d6d6d;
+  --color_black: #000000;
+  --color_white: #ffffff;
 
   --space_3xs: clamp(0.25rem, 0.2283rem + 0.1087vw, 0.3125rem);
   --space_2xs: clamp(0.5rem, 0.4783rem + 0.1087vw, 0.5625rem);
@@ -63,26 +17,15 @@
   --space_3xl: clamp(5rem, 4.7826rem + 1.087vw, 5.625rem);
   --page_gutters: clamp(var(--space_m), 3vw, var(--space_xl));
   --page-max: 80rem;
+
+  --font-size: 16px;
+
+  --color-bg: var(--color_white);
+  --color-text: var(--color_black);
 }
-
-:root {
-  --color-bg: var(--grey_0a);
-  --color-text: var(--grey_00);
-}
-
-/* @media (prefers-color-scheme: dark) {
-  :root:not([data-appearance]) {
-    --color-bg: var(--base_01);
-    --color-text: var(--base_07);
-  }
-} */
-
-/* [data-appearance="dark"] {
-  --color-bg: var(--base_01);
-  --color-text: var(--base_07);
-} */
 
 body {
   background: var(--color-bg);
   color: var(--color-text);
+  font-size: 1.25rem;
 }

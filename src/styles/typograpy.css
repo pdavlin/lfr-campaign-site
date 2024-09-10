@@ -1,3 +1,23 @@
 body {
-  font-family: "Inter Variable", sans-serif;
+  font-family: "Nunito Sans Variable", sans-serif;
+}
+
+h1 {
+  font-family: "Libre Caslon Text", serif;
+  font-size: 3.75rem;
+  font-weight: 400;
+}
+
+h2 {
+  font-family: "Libre Caslon Text", serif;
+  font-size: 2.625rem;
+  font-style: italic;
+}
+
+h3 {
+  font-family: "Libre Caslon Text", serif;
+  font-size: 2rem;
+  font-weight: semibold;
+  letter-spacing: 4%;
+  text-transform: uppercase;
 }

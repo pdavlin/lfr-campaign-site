@@ -1,22 +1,22 @@
 ---
 import { Image } from "astro:assets";
-import efrCampaignLogo from "../images/elizabeth-oconnor-bor-logo.png";
+import efrCampaignLogo from "../images/efr-logo.svg";
 ---
 
 <header class="site-header">
-  <div class="logo-container">
+  <a class="logo-container" href="/">
     <Image src={efrCampaignLogo} alt="Elizabeth O'Connor for Board of Regents Campaign Logo"/>
-  </div>
+  </a>
   <nav class="cluster">
       <ul class="cluster" role="list">
           <li>
-              <a href="/">Home</a>
+            <a href="/issues/">The Issues</a>
           </li>
           <li>
-              <a href="/meet-elizabeth/">Meet Elizabeth</a>
+            <a href="/meet_elizabeth/">About Elizabeth</a>
           </li>
           <li>
-              <a href="/board-of-regents/">About The Board of Regents</a>
+            <a class="button-link donate" href="https://contact.elizabethforregent.com" target="_blank" style="width: 7.875rem;">Donate</a>
           </li>
       </ul>
   </nav>
@@ -24,9 +24,10 @@ import efrCampaignLogo from "../images/elizabeth-oconnor-bor-logo.png";
 
 <style>
     .site-header {
-        position: relative;
+        position: sticky;
         display: flex;
         grid-template-columns: auto 1fr;
+        height: 219px;
         justify-content: space-between;
         padding-inline: var(--page_gutters);
         margin-block: var(--page_gutters) var(--space_l);
@@ -37,19 +38,13 @@ import efrCampaignLogo from "../images/elizabeth-oconnor-bor-logo.png";
             display: grid;
             place-items: center;
             place-content: center;
-            color: currentcolor;
             text-decoration: none;
-        }
-
-        .logo-container {
-          padding-right: 2rem;
-          width: 10rem;
         }
         img {
           display: inline;
           object-fit: contain;
-          width: 100%;
-          height: 100%;
+          width: 273px;
+          height: 125px;
         }
     }
 

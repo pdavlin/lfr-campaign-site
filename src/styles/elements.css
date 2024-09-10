@@ -1,7 +1,6 @@
 .title {
   font-size: 2.5rem;
   letter-spacing: 1.25px;
-  margin-bottom: var(--space_m);
   text-transform: uppercase;
 }
 
@@ -11,7 +10,7 @@
   --content: min(var(--page-max), 100% - var(--gap) * 2);
   /* --content: 1fr; */
   --gutter: minmax(var(--gap), var(--gutter-max));
-  --popout: minmax(0px, 1rem);
+  --popout: minmax(8px, 12rem);
   grid-template-columns:
     [full-start]0px [gutter-start]var(--gutter) [popout-start]var(--popout)
     [content-start]var(--content) [content-end]var(--popout) [popout-end]var(
