@@ -21,7 +21,7 @@ import efrCampaignLogo from "../images/efr-logo-white.svg";
     background-color: var(--color_blue);
     color: white;
     display: flex;
-    flex-direction: row;
+    flex-direction: var(--flex-dir, row);
     font-size: 11px;
     justify-content: space-between;
     margin: 0;
@@ -29,7 +29,13 @@ import efrCampaignLogo from "../images/efr-logo-white.svg";
     > div {
       align-items: center;
       display: flex;
+      flex-direction: var(--flex-dir, row);
       gap: 3rem;
+    }
+
+    @media(max-width: 768px) {
+      --flex-dir: column;
+      gap: 1rem;
     }
   }
 
