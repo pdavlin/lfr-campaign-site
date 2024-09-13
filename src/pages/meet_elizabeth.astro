@@ -4,8 +4,11 @@ import DocumentHead from "@components/DocumentHead.astro";
 import Layout from "@layouts/EFRLayout.astro";
 import Divider from "@components/Divider.astro";
 import PopoutBox from "@components/PopoutBox.astro"
+import CtaButtonGroup from "@components/CtaButtonGroup.astro";
 import { Image } from "astro:assets";
-import elizabethOconnorProfileImage from "../images/elizabeth-oconnor-profile-photo.png";
+import universitySeal from "../images/university-seal.svg";
+import meetElizabethProfilePic from "../images/meet-elizabeth-oconnor-picture.jpg";
+
 
 const title = "Elizabeth O'Connor for Nebraska Board of Regents - District 4";
 const description = "Re-Elect Elizabeth O'Connor to ensure that the University of Nebraska is funded fairly, spends prudently, and invests wisely for the future.";
@@ -14,149 +17,144 @@ const page = "home";
 ---
 
 <html lang="en">
-    <DocumentHead
-        title={title}
-        description={description}
-        permalink={permalink}
-    />
-    <body>
-        <Layout page={page}>
-            <div class="header-content">
-              <Image class="headline-photo" src={elizabethOconnorProfileImage} alt="Elizabeth O'Connor smiling, arms crossed" loading="eager" />
-              <div class="cta-container">
-                <div class="cta-text">
-                  <h2>Transforming Nebraska's Future:</h2>
-                  <h1>Elizabeth O'Connor's Commitment to Education</h1>
-                  <div class="cta-actions">
-                    <!-- <a class="button-link" href="/issues" target="_blank">The Issues</a> -->
-                    <a class="button-link donate" href="https://contact.elizabethforregent.com" target="_blank">Donate</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="breakout flow spacer-top">
-              <p>As Student Body President at the University of Nebraska at Omaha and a Student Representative on the Board of Regents, Elizabeth O'Connor witnessed firsthand how higher education can change lives. She saw how a great professor, an impactful internship, or a degree could redefine a person’s future. This transformation happens every year for thousands of students across the four universities. Inspired by these experiences, Elizabeth committed herself to making higher education more accessible to Nebraskans</p>
-              <p>After completing law school, Elizabeth returned to Nebraska, knowing that no other place would ever feel like home. In 2018, she ran for the District 4 seat on the Board of Regents and was honored to become the youngest Regent ever elected and one of the few women to serve.</p>
-              <Divider />
-              <h3>Progress and Vision</h3>
-              <p>Elizabeth O’Connor's five years on the Board of Regents have been marked by significant achievements, including the following:</p>
-              <ul>
-                <li><a href="https://nebraska.edu/nebraska-promise">Nebraska Promise</a>: Covering tuition for students from families earning $65,000 or less.</li>
-                <li><a href="https://omaha.com/news/state-and-regional/nus-deferred-maintenance-program-making-headway-providing-economic-boost/article_9ffa4670-2310-11ed-b958-633325a36dfd.html">Deferred Maintenance Projects</a>: Utilizing low interest rates to save taxpayers an estimated $1.5 billion over 40 years.</li>
-                <li><a href="https://www.unmc.edu/newsroom/2023/09/06/groundbreaking-unk-unmc-partnership-ushers-in-new-era-for-rural-health-care/">Healthcare in Rural Nebraska</a>: A partnership between UNK and UNMC to address the rural healthcare gap.</li>
+  <DocumentHead
+      title={title}
+      description={description}
+      permalink={permalink}
+  />
+  <body>
+    <Layout page={page}>
+      <Image class="circle-pic" src={meetElizabethProfilePic} alt="Profile picture of Elizabeth O'Connor smiling, looking at the camera"/>
+      <div class="breakout flow">
+        <div class="intro-container flow">
+          <h2>Nebraska Native & UNO Alum</h2>
+          <h1> Meet Elizabeth</h1>
+          <p>Elizabeth O’Connor is a proud Nebraska native, happily married with a young child, two playful greyhounds, and an imperious Maine Coon cat. Her Nebraska roots run deep, from attending Duchesne Academy to living in Metcalf Park, where she enjoys the vibrant community. With a passion for higher education and a commitment to making a difference, Elizabeth brings a personal touch and dedication to her role on the Board of Regents. Elizabeth O’Connor’s experiences as a student leader and law school graduate have shaped her vision for a better future for all Nebraskans.</p>
+          <CtaButtonGroup></CtaButtonGroup>
+        </div>
+        <div class="resume-container">
+          <div>
+            <h3>Academic</h3>
+            <span>University of Nebraska at Omaha, Bachelor of Arts, summa cum laude (2012)</span>
+            <ul>
+              <li>Student Body President/Student Regent for UNO </li>
+              <li>Speaker of the Senate </li>
+              <li>Chi Omega Community Service Chair </li>
+              <li>Omicron Delta Kappa honors society </li>
+              <li>Vice Chancellor's Student Leadership Award </li>
+              <li>Outstanding Student in Arts and Sciences </li>
+              <li>Outstanding Student in Political Science</li>
+            </ul>
+            <span>University of Notre Dame Law School, Juris Doctor (2015)</span>
+            <ul>
+            <li>Editor-in-Chief of the Notre Dame Journal of Legislation</li>
+            <li>Dean's Award in her Intensive Trial Advocacy Class</li>
+            <li>Student attorney in a low-income law clinic.</li>
+            </ul>
+          </div>
+          <div>
+          <h3>Professional</h3>
+          <p>Elizabeth O’Connor is currently serving as a Deputy County Attorney in the Civil Division of the Douglas County, Nebraska Attorneys Office. Prior to that, she was a litigator in private practice.</p>
+          <p> Received UNO Young Alumni Award (2022)</p>
+          </div>
+        </div>
+        <PopoutBox>
+          <div class="popout-contents">
+            <Image class="university-seal" src={universitySeal} alt="University of Nebraska Seal"/>
+            <div>
+              <h3>Board Service</h3>
+              <ul class="popout-list">
+                <li>Elected to the Board of Regents 2018</li>
+                <li>Represents District 4</li>
+                <li>Audit Risk and Compliance Committee.</li>
+                <ul>
+                <li>Member (2018 – 2020)</li>
+                <li>Chair (2020 – 2022)</li>
+                </ul>
+                <li class="break">Academic Affairs Committee.</li>
+                <ul>
+                <li>Member (2022 – present)</li>
+                </ul>
+                <li>Executive Committee. </li>
+                <ul>
+                <li>Member (2022 – present)</li>
+                </ul>
               </ul>
-              <p>Yet, challenges remain. The University faces reduced state funding, declining enrollment, and the brain drain of young talent. Experienced, optimistic leadership is needed to navigate these issues and maintain the focus on the core mission of education.</p>
-              <PopoutBox>
-                <h3>Our Commitment</h3>
-                <p>Elizabeth O’Connor is running for re-election because Nebraska students deserve a high-quality, affordable education. The focus is on attracting and retaining top talent, fostering new business and industries, and ensuring the University continues to be a leading institution in medical research and education.</p>
-                <p>With the support of the community, Elizabeth O'Connor will continue to work tirelessly to ensure that the University is funded fairly, spends wisely, and invests in a prosperous future for Nebraska.</p>
-                <p>Elizabeth thanks everyone for their continued support and belief in a brighter future for the state and its students. Together, great things can be achieved.</p>
-              </PopoutBox>
             </div>
-        </Layout>
-    </body>
+          </div>
+        </PopoutBox>
+      </div>
+    </Layout>
+  </body>
 </html>
 
 <style>
 
-.spacer-top {
-  margin-block-start: var(--space_m);
-}
-
-.priorities-list > li > strong {
-  text-transform: uppercase;
-}
-
-.header-content {
-  display: grid;
-  place-content: center;
-  /* @media (max-width: 768px) {
-    grid-template-rows: auto auto;
-  } */
-}
-
-@media (min-width: 769px) {
-  .header-content > * {
-    grid-area: 1 / 1;
+.circle-pic {
+  position: absolute;
+  top: 172px;
+  right: 0;
+  height: 589px;
+  width: 448px;
+  height:
+  @media screen and (max-width: 800px) {
+    width: 75%;
   }
 }
 
-.cta-container {
-  align-items: flex-end;
-  display: flex;
-  flex-direction: row-reverse;
+.breakout {
+  margin-top: 3rem;
+  >* {
+    z-index: 1;
+  }
 }
+.intro-container {
+  background: white;
+  border-bottom: 4px solid var(--color_blue);
+  padding-bottom: 2rem;
+  width: 65%;
 
-.cta-text {
-  color: var(--color_white);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  width: 50%;
-  @media (max-width: 768px) {
-    background-color: var(--color_blue);
-    margin-block: var(--space_s);
-    padding: 0 var(--space_s);
+  @media screen and (max-width: 700px) {
+    grid-column: full;
+    margin-top: 13rem;
     width: 100%;
   }
-  > * {
-    margin-block-start: 2rem;
+}
+
+.resume-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media screen and (max-width: 800px) {
+    grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 768px) {
-
-  .cta-text > * {
-    margin-block-start: 1rem;
-  }
-
-  .cta-text > h1 {
-    font-size: 1.25rem !important;
-    margin-block-end: var(--space_s);
-  }
-
-  .cta-text > h2 {
-    font-size: 1.25rem !important;
-  }
-}
-
-.cta-actions {
+.popout-contents {
   display: flex;
   flex-direction: row;
-  gap: 1.5rem;
-  > a.button-link {
-    width: min(15rem, 50%);
+  gap: 2rem;
+
+  @media screen and (max-width: 650px) {
+    align-items: center;
+    flex-direction: column;
   }
 }
 
-.headline-photo {
-  grid-area: 1 / 1;
-  object-fit: cover;
-  width: 100dvw;
-  height: 100%;
+.popout-list {
+  padding-left: 1.25rem; /* Remove left padding on list items */
+  column-count: 1; /* Start with single column */
 }
 
-ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 2rem;
-  padding: 0;
-  @media(max-width: 768px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 1rem;
+@media screen and (min-width: 1024px) {
+  .popout-list {
+    column-count: 2; /* Change to two columns on desktop */
+    column-gap: 3rem;
+  }
+
+  .break {
+    break-inside: avoid-column; /* Prevent reflow in a new column */
   }
 }
 
-ul > li {
-  background-color: var(--color_blue);
-  border-radius: 30px;
-  color: white;
-  list-style: none;
-  padding: 1.75rem;
-  text-align: center;
-}
 </style>

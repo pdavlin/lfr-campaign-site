@@ -4,6 +4,7 @@ import DocumentHead from "@components/DocumentHead.astro";
 import Layout from "@layouts/EFRLayout.astro";
 import Divider from "@components/Divider.astro";
 import PopoutBox from "@components/PopoutBox.astro"
+import CtaButtonGroup from "@components/CtaButtonGroup.astro";
 import { Image } from "astro:assets";
 import elizabethOconnorProfileImage from "../images/elizabeth-oconnor-profile-photo.png";
 
@@ -27,10 +28,7 @@ const page = "home";
                 <div class="cta-text">
                   <h2>Transforming Nebraska's Future:</h2>
                   <h1>Elizabeth O'Connor's Commitment to Education</h1>
-                  <div class="cta-actions">
-                    <!-- <a class="button-link" href="/issues" target="_blank">The Issues</a> -->
-                    <a class="button-link donate" href="https://contact.elizabethforregent.com" target="_blank">Donate</a>
-                  </div>
+                  <CtaButtonGroup></CtaButtonGroup>
                 </div>
               </div>
             </div>
@@ -92,6 +90,7 @@ const page = "home";
 .cta-text {
   color: var(--color_white);
   display: flex;
+
   flex-direction: column;
   justify-content: center;
   height: 100%;
@@ -120,15 +119,6 @@ const page = "home";
 
   .cta-text > h2 {
     font-size: 1.25rem !important;
-  }
-}
-
-.cta-actions {
-  display: flex;
-  flex-direction: row;
-  gap: 1.5rem;
-  > a.button-link {
-    width: min(15rem, 50%);
   }
 }
 
