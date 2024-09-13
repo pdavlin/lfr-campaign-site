@@ -1,0 +1,45 @@
+---
+import "@styles/global.css";
+import DocumentHead from "@components/DocumentHead.astro";
+import Layout from "@layouts/EFRLayout.astro";
+
+const title = "About the Board";
+const description = "Re-Elect Elizabeth O'Connor for the University of Nebraska Board of Regents in District 4.";
+const permalink = "https://elizabethforregent.com";
+const page = "home";
+---
+
+<html lang="en">
+    <DocumentHead
+        title={title}
+        description={description}
+        permalink={permalink}
+    />
+    <body>
+        <Layout page={page}>
+          <div class="breakout flow spacer-top">
+              <h2>Representing District 4</h2>
+              <h1>The Issues</h2>
+              <h3>Financial: Dynamic, Responsible, and Efficient Management</h3>
+              <p>To maintain NU's accessibility, our budget must be dynamic, responsible, and efficient. As Regents, our role is to be vigilant stewards of taxpayer dollars, consistently seeking cutting-edge solutions that ensure scarce resources are efficiently allocated toward the University’s most valuable assets: our faculty and students.</p>
+              <h3>Students: Creating Meaningful Pathways</h3>
+              <p>Universities have the power to transform students' lives. Students need meaningful internships that create pathways to successful careers, and challenging courses that drive academic excellence. Successful graduates add vibrancy to our great State. The University must be accessible to all, affordable, and unwavering in its commitment to quality education.</p>
+              <h3>Professors: Faculty are the Foundation</h3>
+              <p>Professors are integral to the University’s identity and profoundly influence the student experience. It is essential to attract and retain top talent by offering competitive resources and compensation. Ensuring our faculty have the support they need is key to maintaining the high standards of education and research at our institution.</p>
+              <h3>Research: Advancing Healing and Innovation</h3>
+              <p>NU’s research can save and transform lives. We must continue to enhance our efforts to secure research funding by leveraging our fiscal power, human resources, and institutional mission. Our work spans from training healthcare professionals to developing life-saving medicines and technologies, advancing agricultural innovations to feed the wolrd, securing information technology infrastructure, and leading research in numerous other fields that benefit our state and beyond.</p>
+              <h3>Future: Retaining Talent</h3>
+              <p>It is well documented that Nebraska faces a significant challenge with a brain drain: we often lose many of our most promising young individuals. To foster economic development, we must create an environment where talent can thrive within our state. It is crucial to ensure that Nebraska remains a place where dreams can be realized and where individuals can make impactful, innovative, and valuable contributions.</p>
+          </div>
+        </Layout>
+    </body>
+</html>
+
+<style>
+h3, p {
+  z-index: 1;
+}
+p:last-child {
+  margin-bottom: 150px;
+}
+</style>

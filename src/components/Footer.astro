@@ -2,45 +2,84 @@
 import { Image } from "astro:assets";
 import efrCampaignLogo from "../images/efr-logo-white.svg";
 ---
-
-<footer class="site-footer">
-  <div>
-    <Image src={efrCampaignLogo} alt="Elizabeth O'Connor for Board of Regents Campaign Logo"/>
-    <div class="address-container">
-      <span>Paid for by Elizabeth O'Connor For Regent</span>
-      <span>13110 Birch DR STE 148, PMB 182, Omaha, NE 68164</span>
+<div class="contact-trapezoid-container">
+  <div class="triangle" />
+  <div class="contact-footer breakout">
+    <div class="contact-container">
+      <div class="contact-description">
+        <h3>Join The Campaign</h3>
+        <span>Interested in joining the team?</span>
+        <br>
+        <span>Sign up to volunteer today.</span>
+      </div>
     </div>
   </div>
-  <div>
-  <button class="donate" style="width: 7.875rem">Donate</button>
-  </div>
-</footer>
-
+</div>
+  <footer class="site-footer">
+    <div>
+      <Image src={efrCampaignLogo} alt="Elizabeth O'Connor for Board of Regents Campaign Logo"/>
+      <div class="address-container">
+        <span>Paid for by Elizabeth O'Connor For Regent</span>
+        <span>13110 Birch DR STE 148, PMB 182, Omaha, NE 68164</span>
+      </div>
+    </div>
+    <div>
+    <button class="donate" style="width: 7.875rem">Donate</button>
+    </div>
+  </footer>
 <style>
-  .site-footer {
-    background-color: var(--color_blue);
-    color: white;
+
+.contact-trapezoid-container {
+  background-color: var(--color_grey_light);
+  grid-column: full;
+  margin-top: -200px;
+}
+
+.triangle {
+  clip-path: polygon(100% 0, 0 0, 0 100%);
+  width: 0;
+  height: 0;
+  border-top: 200px solid white;
+  border-right: 100vw solid var(--color_grey_light);
+  grid-column: full;
+}
+
+.contact-footer {
+  background-color: var(--color_grey_light);
+  margin-block-start: 100px;
+  padding-bottom: 100px;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  width: 100%;
+}
+
+.site-footer {
+  background-color: var(--color_blue);
+  color: white;
+  display: flex;
+  flex-direction: var(--flex-dir, row);
+  font-size: 11px;
+  justify-content: space-between;
+  margin: 0;
+  padding: var(--space_2xl);
+  > div {
+    align-items: center;
     display: flex;
     flex-direction: var(--flex-dir, row);
-    font-size: 11px;
-    justify-content: space-between;
-    margin: 0;
-    padding: var(--space_2xl);
-    > div {
-      align-items: center;
-      display: flex;
-      flex-direction: var(--flex-dir, row);
-      gap: 3rem;
-    }
-
-    @media(max-width: 768px) {
-      --flex-dir: column;
-      gap: 1rem;
-    }
+    gap: 3rem;
   }
 
-  .address-container {
-    display: flex;
-    flex-direction: column;
+  @media(max-width: 768px) {
+    --flex-dir: column;
+    gap: 1rem;
   }
+}
+
+.address-container {
+  display: flex;
+  flex-direction: column;
+}
 </style>
